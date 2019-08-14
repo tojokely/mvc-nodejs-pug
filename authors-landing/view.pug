@@ -1,0 +1,21 @@
+extends ../index.pug
+
+block content
+	section.hero.is-dark.is-bold.is-medium
+		.hero-body
+			.container
+				h1.title= title
+				h2.subtitle= subtitle
+
+	ul.container(style={'padding': '20px'})
+		each author in authors
+			article.media
+				figure.media-left
+					p.image.is-96x96
+						img(src='https://bulma.io/images/placeholders/96x96.png')
+				media-content
+					.content(style={'padding': '20px'})
+						h3.title.is-3= author.name
+						p.subtitle.is-5= author.books
+
+
